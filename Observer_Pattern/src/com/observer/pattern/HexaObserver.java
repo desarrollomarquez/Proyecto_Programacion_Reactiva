@@ -3,6 +3,7 @@ package com.observer.pattern;
 public class HexaObserver extends Observer{
 
 	   public HexaObserver(Subject subject){
+		  System.out.println("1");
 	      this.subject = subject;
 	      this.subject.attach(this);
 	   }

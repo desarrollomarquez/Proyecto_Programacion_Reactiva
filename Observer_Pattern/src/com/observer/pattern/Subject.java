@@ -17,13 +17,18 @@ public class Subject {
 	   }
 
 	   public void attach(Observer observer){
+		  System.out.println("2");
 	      observers.add(observer);		
 	   }
 
 	   public void notifyAllObservers(){
-	      for (Observer observer : observers) {
+	      /*for (Observer observer : observers) {
 	         observer.update();
-	      }
+	      }*/
+		  observers.stream().forEach(p -> {
+			  System.out.print(p);
+			   p.update(); 
+		  });
 	   } 
 
 }
